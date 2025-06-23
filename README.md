@@ -21,7 +21,7 @@ dvtf-pingctl generate \
 
 ## 3. Review the `templatefile()` implementation
 
-
+https://github.com/patrickcping/davinci-terraform-template-example/blob/64b3ae6250fddb4ca4c195016c512e2dec6e5787/example-hcl.tf#L50-L54
 
 ## 4. Run Terraform as normal
 
