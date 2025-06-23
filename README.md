@@ -2,6 +2,10 @@
 
 Process:
 
+## 0. Start point
+
+- Delete the directory `my-generated-terraform-module` (this gets created in step 1)
+- Delete `flows/example-main-flow.tftpl` (this gets created in step 2)
 
 ## 1. Generate the Terraform
 
