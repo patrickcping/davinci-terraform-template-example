@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cat flows/example-main-flow.json | jq '.settings.cssLinks += ["${customer_css_link}"]' | jq '.settings.jsLinks += [{
+cat flows/example-main-flow.json | sed -e 's/\${/$${/g' | jq '.settings.cssLinks += ["${customer_css_link}"]' | jq '.settings.jsLinks += [{
         "crossorigin": "",
         "defer": "false",
         "integrity": "",

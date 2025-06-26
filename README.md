@@ -23,6 +23,13 @@ dvtf-pingctl generate \
 ./prepare_flow_template.sh
 ```
 
+Important points to note:
+
+### Embedded JavaScript uses the same template notation as Terraform's `templatefile()`
+
+The `prepare_flow_template.sh` runs `sed -e 's/\${/$${/g'` _before_ running `jq` templating to ensure that existing JavaScript variables are escaped using `$$` notation.
+Ref: https://discuss.hashicorp.com/t/escape-bash-variable-reference-in-terraform-template/31479
+
 ## 3. Review the `templatefile()` implementation
 
 https://github.com/patrickcping/davinci-terraform-template-example/blob/64b3ae6250fddb4ca4c195016c512e2dec6e5787/example-hcl.tf#L50-L54
